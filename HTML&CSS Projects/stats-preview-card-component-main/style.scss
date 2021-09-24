@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lexend+Deca&display=swap');
+
+// ? colors and variables
+$ff-primary: 'Inter', sans-serif;
+$ff-headings: 'Lexend Deca', sans-serif;
+$clr-main-bgc: hsl(233, 47%, 7%);
+$clr-card-bgc: hsl(244, 38%, 16%);
+$clr-accent: hsl(277, 64%, 61%);
+$clr-main-h-stats: hsl(0, 0%, 100%);
+$clr-main-p: hsla(0, 0%, 100%, 0.75);
+$clr-stat-h: hsla(0, 0%, 100%, 0.6);
+$clr-link:hsl(228, 45%, 44%);
+
+
+
+// Reset
+  *{
+    margin: 0 auto;padding: 0;
+    box-sizing: border-box;
+    
+  }
+// General
+body{
+  background: $clr-main-bgc;
+  color: #fff;
+  overflow-x: hidden;
+
+  p{
+    font-family: $ff-primary;
+    color: $clr-main-p;
+  }
+
+  h1,h2{
+    font-family: $ff-headings;
+    color: $clr-main-h-stats;
+  }
+  
+  li{
+    list-style: none;
+  }
+  a{
+    color:$clr-link ;
+  }
+  
+}
+
+
+.container{
+  width: 100vw; height: 100vh;
+  display: flex;
+  align-items: center;
+  
+  justify-content: center;
+
+// card styling
+.card{
+  // !color
+  background: $clr-card-bgc;
+  // ! aligning
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  // ! size
+  
+  max-width: 1110px; 
+  border-radius:8px;
+  overflow: hidden;
+
+  // ?right
+  #overlay{
+    position: relative;
+    &:after{
+      content: '';
+      background: $clr-accent;
+      position: absolute;
+      top: 0;left: 0;
+      width: 100%; height: 100%;
+      opacity: .6;
+    }
+  }
+  .left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+.content{
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  
+  h1{
+    margin-bottom: 25px;
+    line-height: 1.3;
+    font-size: 34px;
+    align-self: center;
+    justify-self: center;
+    width: 80%;
+
+    .font-color{
+      color: $clr-accent;
+    }
+  }
+  p{
+    width: 80%;
+    font-size: 15px;
+    
+   
+    
+    
+  }
+  .statistics{
+    margin-top: 3rem;
+    ul{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 4rem;
+      p{
+        font-size: 15px;
+        margin-left: -8px;
+        
+      }
+    }
+  }
+ 
+
+
+}
+  
+  
+}}
+}
+#main-footer{
+  background: $clr-card-bgc;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  p{
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+  }
+ 
+}
+
+
+// Styling the mobile
+@media (max-width: 720px) {
+   .container{
+     .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: space-around;
+        width: 85%;
+        height: 83%;
+        position: relative;
+
+
+
+        // ? the image
+        #overlay{
+          margin-top: -6rem;
+          width: 100%;
+         
+          
+          
+          .img{
+              
+            img{
+              width: 100%;
+              height: 25rem;
+            }
+          }
+        }
+
+        // ? the text
+        .left{
+         width: 100%;
+           .content{
+            
+            
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            p{
+              font-size: 1.2rem;
+            }
+
+
+           .statistics{
+            ul{
+             display: flex;
+              flex-direction: column;
+              li p{
+                margin-left: 10px;
+                font-size: 1.2rem;
+              }
+            } }
+           }
+          .content *{
+           margin: 0;
+           padding: 0;
+            
+           
+            
+        }
+       
+      }
+   }
+}}
